@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大田和寿 | ポートフォリオ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2C3E50;
+            --secondary-color: #3498DB;
+            --accent-color: #E74C3C;
+            --light-bg: #ECF0F1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--primary-color);
+        }
+
+        .page {
+            min-height: 100vh;
+            border-bottom: 2px solid #eee;
+            position: relative;
+        }
+
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .header {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 2rem auto;
+            background: #fff;
+            display: block;
+            border: 5px solid white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .skill-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .achievement-list {
+            list-style: none;
+        }
+
+        .achievement-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .achievement-list li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .footer {
+            padding: 2rem;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                position: static;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#overview">概要</a>
+        <a href="#consulting">ITコンサルティング</a>
+        <a href="#futsal">フットサル</a>
+    </nav>
+
+    <!-- Page 1: Overview -->
+    <div id="overview" class="page">
+        <header class="header">
+            <div class="container">
+                <img src="/api/placeholder/250/250" alt="大田和寿" class="profile-img">
+                <h1 class="page-title">大田 和寿</h1>
+                <p style="font-size: 1.5rem; margin-bottom: 2rem;">ITコンサルタント & プロフットサル選手</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>基本情報</h3>
+                        <p>名前: 大田 和寿 (Ohta Kazutoshi)</p>
+                        <p>生年月日: 1998年10月12日</p>
+                        <p>国籍: 日本</p>
+                        <p>居住地: イタリア</p>
+                        <p>MBTI: ENTP-A</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>プロフィール概要</h3>
+                        <p>イタリアを拠点に活動するITコンサルタント。同時にプロフットサル選手としても活躍中。テクノロジーとスポーツの両分野でキャリアを構築し、独自の視点でビジネスソリューションを提供しています。</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Page 2: IT Consulting -->
+    <div id="consulting" class="page">
+        <div class="container">
+            <h2 class="section-title">ITコンサルティング</h2>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <p>完了プロジェクト</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <p>クライアント企業</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <p>年間の経験</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-title">専門分野</h3>
+                <ul class="achievement-list">
+                    <li>デジタルトランスフォーメーション戦略立案・実行支援</li>
+                    <li>クラウドインフラストラクチャ最適化</li>
+                    <li>ビジネスプロセス再設計</li>
+                    <li>データ分析・BI導入支援</li>
+                    <li>アジャイル開発手法導入支援</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-title">主要プロジェクト実績</h3>
+                <ul class="achievement-list">
+                    <li>大手製造業のグローバルERP導入プロジェクト統括</li>
+                    <li>金融機関のデジタル顧客体験改善プロジェクト</li>
+                    <li>小売チェーンのオムニチャネル戦略立案・実装</li>
+                    <li>スタートアップ企業のIT戦略コンサルティング</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Futsal -->
+    <div id="futsal" class="page">
+        <div class="container">
+            <h2 class="section-title">フットサル選手</h2>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <p>出場試合数</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45+</div>
+                    <p>得点数</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3+</div>
+                    <p>所属リーグ優勝</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-title">選手としての特徴</h3>
+                <ul class="achievement-list">
+                    <li>ピヴォット位置でのホールドプレー</li>
+                    <li>高度な状況判断力と戦術理解</li>
+                    <li>チームリーダーとしての統率力</li>
+                    <li>若手選手の育成・指導経験</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-title">主な実績</h3>
+                <ul class="achievement-list">
+                    <li>イタリアセリエA2所属</li>
+                    <li>リーグベスト5選出</li>
+                    <li>ユース育成プログラムリーダー</li>
+                    <li>国際親善試合MVP受賞</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p>© 2024 大田和寿</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
